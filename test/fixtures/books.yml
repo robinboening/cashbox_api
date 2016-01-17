@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cashbox:
+  opened_at: 2016-01-01
+  closed_at: 2016-12-31
+  opening_balance: 0.00
+  total: 310.99
+
+two:
+  cashbox:
+  opened_at: 2017-01-01
+  closed_at: nil
+  opening_balance: 310.99
+  total: 310.99

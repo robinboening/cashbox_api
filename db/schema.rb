@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160116192142) do
+ActiveRecord::Schema.define(version: 20160116203856) do
+
+  create_table "books", force: :cascade do |t|
+    t.integer  "cashbox_id"
+    t.string   "name"
+    t.date     "opened_at"
+    t.date     "closed_at"
+    t.decimal  "opening_balance", precision: 7, scale: 2, default: "0.0", null: false
+    t.decimal  "total",           precision: 7, scale: 2, default: "0.0", null: false
+    t.datetime "created_at",                                              null: false
+    t.datetime "updated_at",                                              null: false
+    t.index ["cashbox_id"], name: "index_books_on_cashbox_id"
+  end
 
   create_table "cashboxes", force: :cascade do |t|
     t.string   "name"
