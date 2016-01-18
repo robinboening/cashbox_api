@@ -10,6 +10,9 @@ gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma'
 
+# Use ActiveModelSerializers to serialize JSON responses
+gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
