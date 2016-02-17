@@ -46,6 +46,6 @@ class CashboxesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def cashbox_params
-      params.fetch(:cashbox, {})
+      params.try(:[], :data).require(:attributes).permit(:name)
     end
 end
