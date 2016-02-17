@@ -3,7 +3,7 @@ class CashboxesController < ApplicationController
 
   # GET /cashboxes
   def index
-    @cashboxes = Cashbox.all
+    @cashboxes = Cashbox.order(created_at: :desc)
 
     render json: @cashboxes
   end
